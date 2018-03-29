@@ -39,7 +39,7 @@ if [[ ! $jarfile = $verify ]]; then
         echo "你连服务端都没下就来用脚本了??"
         exit 1;
 else
-echo "Your MineCraft Server File is"+$var
+echo "Your MineCraft Server File is" $var
         echo 'Minecraft ServerManager Author:Reimu'
 echo '请选择你需要执行的步骤'
 echo ''

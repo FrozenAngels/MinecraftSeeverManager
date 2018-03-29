@@ -46,7 +46,7 @@ echo ''
 echo "1.启动服务器"
 echo "2.配置文件修改"
 echo "3.全局内存检查"
-echo "4.实验性功能"
+echo "4.生成启动脚本"
 echo "5.退出(Ctrl+c)"
 fi
 while :; do echo
@@ -71,7 +71,7 @@ if [[ $choice == 3 ]];then
 fi
 
 if [[ $choice == 4 ]];then
-	echo "整个脚本就是个实验性功能"
+	bash scriptgen.sh
 fi
 
 if [[ $choice == 5 ]];then

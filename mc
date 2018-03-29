@@ -32,4 +32,49 @@ fi
 [ $(id -u) != "0" ] && { echo "Error: You must be root to run this script"; exit 1; }
 
 #Check If minecraft server file exist
-find ./ -name *.jar
+var=$(find ./ -name *.jar)
+jarfile=${var##*.}
+verify="jar"
+if [[ ! $jarfile = $verify ]]; then
+        echo "你连服务端都没下就来用脚本了??"
+        exit 1;
+else
+echo "Your MineCraft Server File is"+$var
+        echo 'Minecraft ServerManager Author:Reimu'
+echo '请选择你需要执行的步骤'
+echo ''
+echo "1.启动服务器"
+echo "2.配置文件修改"
+echo "3.全局内存检查"
+echo "4.实验性功能"
+echo "5.退出(Ctrl+c)"
+fi
+while :; do echo
+	read -p "请选择： " choice
+	if [[ ! $choice =~ ^[1-5]$ ]]; then
+		echo "输入错误! 请输入正确的数字!"
+	else
+		break	
+	fi
+done
+
+if [[ $choice == 1 ]];then
+	bash ./run.sh
+fi
+
+if [[ $choice == 2 ]];then
+	vi ./server.properties
+fi
+
+if [[ $choice == 3 ]];then
+	htop
+fi
+
+if [[ $choice == 4 ]];then
+	echo "整个脚本就是个实验性功能"
+fi
+
+if [[ $choice == 5 ]];then
+	exit
+fi
+        

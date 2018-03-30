@@ -83,5 +83,5 @@ UseCompressedOops=-XX:+UseCompressedOops
 done
 
 echo "所有需要的启动参数收集完成，开始生成脚本"
-echo "java $Xincgc -Xmx$MaxPermSizeM $AggressiveOpts $UseCompressedOops -jar &jarfile -nogui" >> start.sh
+echo "java $Xincgc -Xmx$MaxPermSize"M" $AggressiveOpts $UseCompressedOops -jar &jarfile -nogui" >> start.sh
 echo "启动脚本生成完成！现在你可以bash start.sh启动你的服务器了！"

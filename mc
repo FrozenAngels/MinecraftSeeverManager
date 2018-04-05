@@ -32,7 +32,7 @@ fi
 [ $(id -u) != "0" ] && { echo "Error: You must be root to run this script"; exit 1; }
 
 #Check If minecraft server file exist
-var=$(find ./ -name *.jar)
+var=$(whereis *.jar)
 jarfile=${var##*.}
 verify="jar"
 if [[ ! $jarfile = $verify ]]; then

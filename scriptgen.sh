@@ -51,7 +51,7 @@ done
 while :; do echo
 echo "当前服务器总内存为" $TotalMem
 	read -p "请输入你的服务端允许占用的最大内存（单位：M)" MaxPermSize
-	if [[ ! $MaxPermSize =~ ^[1-9]$ ]]; then
+	if [[ ! $MaxPermSize =~ ^[0-9]$ ]]; then
 		echo "输入错误! 请输入正确的数字!"
 	else
 			break

@@ -32,7 +32,7 @@ fi
 [ $(id -u) != "0" ] && { echo "Error: You must be root to run this script"; exit 1; }
 
 #Check If minecraft server file exist
-var=$(find . ! -name "." -type d -prune -o -type f -iname "*.jar" -print r)
+var=$(find . ! -name "." -type d -prune -o -type f -iname "*.jar" -print)
 if [[ ! $var="" ]]; then
         echo "你连服务端都没下就来用脚本了??"
         exit 1;
